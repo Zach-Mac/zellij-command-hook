@@ -1,0 +1,132 @@
+layout {
+    cwd "/home/zach"
+    tab name="Tab #1" hide_floating_panes=true {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        pane command="nvim asdf5" {
+            start_suspended true
+}
+
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+    tab name="Tab #8" focus=true hide_floating_panes=true {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        pane split_direction="vertical" {
+            pane command="nvim asdf asdf2" focus=true size="50%" {
+                start_suspended true
+}
+
+            pane command="nvim asdf3 asdf4" size="50%" {
+                start_suspended true
+}
+
+        }
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+    tab name="Tab #2" hide_floating_panes=true {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        pane command="nvim testing123" cwd="/home/zach" {
+            start_suspended true
+}
+
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+    tab name="12:46:45" hide_floating_panes=true {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        pane split_direction="vertical" {
+            pane command="[fish]" cwd="/home/zach" size="50%" {
+                args "<defunct>"
+                start_suspended true
+            }
+            pane command="[fish]" cwd="/home/zach" size="50%" {
+                args "<defunct>"
+                start_suspended true
+            }
+        }
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+    tab name="Tab #4" hide_floating_panes=true {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        pane command="nvim asdfasdf" cwd="/home/zach" {
+            start_suspended true
+}
+
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+    tab name="12:56" hide_floating_panes=true {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        pane command="[fish]" cwd="/home/zach" {
+            args "<defunct>"
+            start_suspended true
+        }
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+    tab name="Tab #6" hide_floating_panes=true {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        pane command="nvim asdf" cwd="/home/zach" {
+            start_suspended true
+}
+
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+    tab name="Tab #7" hide_floating_panes=true {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        pane command="[fish]" cwd="/home/zach" {
+            args "<defunct>"
+            start_suspended true
+        }
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+    tab name="Tab #9" hide_floating_panes=true {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        pane command="nvim asdf" cwd="/home/zach" {
+            start_suspended true
+}
+
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+    new_tab_template {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
+        }
+        pane cwd="/home/zach"
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+}

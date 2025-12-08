@@ -1,0 +1,23 @@
+
+pane command="/home/zach/.nix-profile/bin/nvim" size="50%" {
+                args "--cmd" "lua vim.opt.packpath:prepend('/nix/store/7fcfmii0vli2ncrgw8phdj1r7zcxf0fc-mnw-configDir');vim.opt.runtimepath:prepend('/nix/store/7fcfmii0vli2ncrgw8phdj1r7zcxf0fc-mnw-configDir');vim.g.loaded_node_provider=0;vim.g.loaded_perl_provider=0;vim.g.loaded_python_provider=0;vim.g.loaded_python3_provider=0;vim.g.ruby_host_prog='/nix/store/4pm6h00i8jizd1vcfh90gkfsipd634rc-neovim-providers/bin/neovim-ruby-host'" "asdf" "asdf2"
+                start_suspended true
+            }
+            pane command="/home/zach/.nix-profile/bin/nvim" focus=true size="50%" {
+                args "--cmd" "lua vim.opt.packpath:prepend('/nix/store/7fcfmii0vli2ncrgw8phdj1r7zcxf0fc-mnw-configDir');vim.opt.runtimepath:prepend('/nix/store/7fcfmii0vli2ncrgw8phdj1r7zcxf0fc-mnw-configDir');vim.g.loaded_node_provider=0;vim.g.loaded_perl_provider=0;vim.g.loaded_python_provider=0;vim.g.loaded_python3_provider=0;vim.g.ruby_host_prog='/nix/store/4pm6h00i8jizd1vcfh90gkfsipd634rc-neovim-providers/bin/neovim-ruby-host'" "asdf3" "asdf4"
+                start_suspended true
+            }
+
+
+WITH ""
+/home/zach/.nix-profile/bin/nvim "--cmd" "lua vim.opt.packpath:prepend('/nix/store/7fcfmii0vli2ncrgw8phdj1r7zcxf0fc-mnw-configDir');vim.opt.runtimepath:prepend('/nix/store/7fcfmii0vli2ncrgw8phdj1r7zcxf0fc-mnw-configDir');vim.g.loaded_node_provider=0;vim.g.loaded_perl_provider=0;vim.g.loaded_python_provider=0;vim.g.loaded_python3_provider=0;vim.g.ruby_host_prog='/nix/store/4pm6h00i8jizd1vcfh90gkfsipd634rc-neovim-providers/bin/neovim-ruby-host'" "asdf" "asdf2"
+
+
+/home/zach/.nix-profile/bin/nvim --cmd lua vim.opt.packpath:prepend('/nix/store/7fcfmii0vli2ncrgw8phdj1r7zcxf0fc-mnw-configDir');vim.opt.runtimepath:prepend('/nix/store/7fcfmii0vli2ncrgw8phdj1r7zcxf0fc-mnw-configDir');vim.g.loaded_node_provider=0;vim.g.loaded_perl_provider=0;vim.g.loaded_python_provider=0;vim.g.loaded_python3_provider=0;vim.g.ruby_host_prog='/nix/store/4pm6h00i8jizd1vcfh90gkfsipd634rc-neovim-providers/bin/neovim-ruby-host' asdf asdf2
+
+
+
+"/home/zach/.nix-profile/bin/nvim" "--cmd" "lua vim.opt.packpath:prepend('/nix/store/7fcfmii0vli2ncrgw8phdj1r7zcxf0fc-mnw-configDir');vim.opt.runtimepath:prepend('/nix/store/7fcfmii0vli2ncrgw8phdj1r7zcxf0fc-mnw-configDir');vim.g.loaded_node_provider=0;vim.g.loaded_perl_provider=0;vim.g.loaded_python_provider=0;vim.g.loaded_python3_provider=0;vim.g.ruby_host_prog='/nix/store/4pm6h00i8jizd1vcfh90gkfsipd634rc-neovim-providers/bin/neovim-ruby-host'" "asdf3" "asdf4"
+
+
+/home/zach/.nix-profile/bin/nvim --cmd lua vim.opt.packpath:prepend('/nix/store/7fcfmii0vli2ncrgw8phdj1r7zcxf0fc-mnw-configDir');vim.opt.runtimepath:prepend('/nix/store/7fcfmii0vli2ncrgw8phdj1r7zcxf0fc-mnw-configDir');vim.g.loaded_node_provider=0;vim.g.loaded_perl_provider=0;vim.g.loaded_python_provider=0;vim.g.loaded_python3_provider=0;vim.g.ruby_host_prog='/nix/store/4pm6h00i8jizd1vcfh90gkfsipd634rc-neovim-providers/bin/neovim-ruby-host' asdf3 asdf4

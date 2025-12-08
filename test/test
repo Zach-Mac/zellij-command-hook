@@ -3,3 +3,6 @@ export RESURRECT_COMMAND="/home/zach/.nix-profile/bin/nvim args --cmd lua vim.op
 
 
 lua vim.opt.packpath:prepend('/nix/store/142frdk214ir45zhxynmhpvh50khnc09-mnw-configDir');vim.opt.runtimepath:prepend('/nix/store/142frdk214ir45zhxynmhpvh50khnc09-mnw-configDir');vim.g.loaded_node_provider=0;vim.g.loaded_perl_provider=0;vim.g.loaded_python_provider=0;vim.g.loaded_python3_provider=0;vim.g.ruby_host_prog='/nix/store/vycxz6dfdb34mdcz0x15fflyqxavdz05-neovim-providers/bin/neovim-ruby-host'
+
+
+
