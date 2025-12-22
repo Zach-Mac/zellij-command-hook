@@ -199,11 +199,7 @@ fn reconstruct_command_from_body(cmd: &str, body: &str) -> String {
 /// Preserves attributes and other properties like start_suspended.
 fn build_simplified_pane(formatted_command: &str, attrs: &str, body: &str) -> String {
     // Extract filenames from "nvim file1 file2" format
-    let files = if let Some(stripped) = formatted_command.strip_prefix("nvim ") {
-        stripped
-    } else {
-        ""
-    };
+    let files = formatted_command.strip_prefix("nvim ").unwrap_or_default();
 
     // Build args line with individual quoted filenames
     let args_line = if files.is_empty() {
