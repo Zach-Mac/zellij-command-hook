@@ -98,6 +98,7 @@ Arguments:
 
 Options:
   -d, --dry-run  Dry run - don't make changes, just show what would change
+  -q, --quiet    Quiet - don't print anything
   -v, --verbose  Verbose output
   -h, --help     Print help
 ```

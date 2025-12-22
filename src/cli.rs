@@ -23,5 +23,9 @@ pub enum Commands {
         /// Dry run - don't make changes, just show what would change
         #[arg(short, long)]
         dry_run: bool,
+
+        /// Quiet - don't print anything
+        #[arg(short, long)]
+        quiet: bool,
     },
 }

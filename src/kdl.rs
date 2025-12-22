@@ -12,7 +12,7 @@ pub struct Changes {
 }
 
 /// Scans a directory recursively for session-layout.kdl files and simplifies nvim commands.
-pub fn scan_layouts(dir_path: &str, verbose: bool, dry_run: bool) {
+pub fn scan_layouts(dir_path: &str, verbose: bool, dry_run: bool, quiet: bool) {
     let path = Path::new(dir_path);
     if !path.is_dir() {
         eprintln!("Error: {} is not a directory", dir_path);
@@ -23,12 +23,16 @@ pub fn scan_layouts(dir_path: &str, verbose: bool, dry_run: bool) {
         println!("===============DRY RUN===============");
     }
 
-    println!("Scanning {} for session-layout.kdl files...", dir_path);
+    if !quiet {
+        println!("Scanning {} for session-layout.kdl files...", dir_path);
+    }
 
     let mut changes = Vec::new();
     scan_dir_recursive(path, &mut changes, verbose, dry_run);
 
-    print_summary(&changes, verbose, dry_run);
+    if !quiet {
+        print_summary(&changes, verbose, dry_run);
+    }
 
     // Log to file (only if not dry-run)
     if !dry_run

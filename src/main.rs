@@ -13,14 +13,17 @@ fn main() {
     let cli = Cli::parse();
 
     match &cli.command {
-        Some(Commands::ScanLayouts { path, dry_run }) => {
+        Some(Commands::ScanLayouts {
+            path,
+            dry_run,
+            quiet,
+        }) => {
             let expanded_path = expand_home(path);
-            scan_layouts(&expanded_path, cli.verbose, *dry_run);
+            scan_layouts(&expanded_path, cli.verbose, *dry_run, *quiet);
         }
         None => {
             // Original behavior
-            let command = std::env::var("RESURRECT_COMMAND")
-                .expect("RESURRECT_COMMAND not set");
+            let command = std::env::var("RESURRECT_COMMAND").expect("RESURRECT_COMMAND not set");
             let formatted = format_nvim(&command);
             println!("{formatted}");
 
