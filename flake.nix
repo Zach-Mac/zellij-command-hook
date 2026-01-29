@@ -2,8 +2,10 @@
 # https://akirak.github.io/flake-templates/
 {
   inputs = {
+    nixpkgs.url = "nixpkgs";
+    # nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+
     flake-parts.url = "github:hercules-ci/flake-parts";
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     # systems.url = "github:nix-systems/default";
 
     treefmt-nix.url = "github:numtide/treefmt-nix";
@@ -52,6 +54,19 @@
           commonArgs,
           ...
         }:
+        let
+          # Nightly toolchain used only for cargo-public-api (rustdoc JSON needs -Z).
+          nightlyToolchain = pkgs.rust-bin.nightly.latest.default;
+          cargoPublicApiWrapped = pkgs.symlinkJoin {
+            name = "cargo-public-api-nightly";
+            paths = [ pkgs.cargo-public-api ];
+            buildInputs = [ pkgs.makeWrapper ];
+            postBuild = ''
+              wrapProgram $out/bin/cargo-public-api \
+                --prefix PATH : ${nightlyToolchain}/bin
+            '';
+          };
+        in
         {
           _module.args = {
             pkgs = import nixpkgs {
@@ -74,14 +89,15 @@
                 pkg-config
               ];
 
-              # buildInputs = with pkgs; [
-              #   glib
-              #   dbus
-              # ];
+              buildInputs = with pkgs; [
+                glib
+                dbus
+              ];
 
               devShellBuildInputs = with pkgs; [
                 rust-analyzer-unwrapped
                 bacon
+                cargoPublicApiWrapped
               ];
             };
           };
@@ -103,6 +119,10 @@
             RUST_SRC_PATH = "${
               pkgs.rust-bin.${rustChannel}.${rustVersion}.rust-src
             }/lib/rustlib/src/rust/library";
+
+            # NOTE: Add env vars below
+
+            RUST_BACKTRACE = "1";
           };
 
           treefmt = {
