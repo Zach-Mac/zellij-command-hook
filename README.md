@@ -1,6 +1,6 @@
 # zellij-command-hook
 
-Simplifies verbose nvim wrapper commands in Zellij and adds direnv support for
+Zellij post_discovery_command_hook and CLI to simplify verbose Nix wrapper commands in resurrected Zellij sessions and adds direnv support for
 project tabs. Written in Rust for fun. Heavy AI help cuz I have more important
 projects I wanna work on.
 
